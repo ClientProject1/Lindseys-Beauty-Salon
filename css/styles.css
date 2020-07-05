@@ -112,18 +112,11 @@ a {
   }
 
   .hash-links {
-    grid-column: 1/9;
+    display: none;
   }
 
   .hero-content button {
     width: 50%;
-  }
-}
-
-@media (min-width: 768px) {
-  .hash-links {
-    justify-content: space-between;
-    font-size: 1rem;
   }
 }
 
@@ -141,21 +134,17 @@ a {
   }
 
   .hero-content {
+    margin-top: 48px;
     grid-column: 1/-1;
   }
 
   .p-hero {
     width: 65%;
+    margin-bottom: 48px;
   }
 
-  .hash-links {
-    grid-column: 1/-1;
-  }
-
-  .hash-links a {
-    border: none;
-    padding: 0;
-    margin-right: 0;
-    text-decoration: underline;
+  .hero-content button {
+    width: 30%;
+    margin-bottom: 24px;
   }
 }
