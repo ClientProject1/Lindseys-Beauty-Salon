@@ -121,9 +121,6 @@ a {
 }
 
 @media (min-width: 768px) {
-  .hero-content button {
-
-  }
   .hash-links {
     justify-content: space-between;
     font-size: 1rem;
@@ -135,16 +132,20 @@ a {
     font-size: 18px;
   }
 
-  h1 {
-    font-size: 3.61rem;
-  }
-
   .container {
     grid-template-columns: repeat(12, 1fr);
   }
 
+  h1 {
+    font-size: 3.61rem;
+  }
+
   .hero-content {
-    grid-column: 1/10;
+    grid-column: 1/-1;
+  }
+
+  .p-hero {
+    width: 65%;
   }
 
   .hash-links {
