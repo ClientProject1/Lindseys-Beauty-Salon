@@ -18,8 +18,9 @@ body {
 header {
   background-image: linear-gradient(rgba(50, 59, 53, 0.5), rgba(50, 59, 53, 1)), url('../img/hero-img.png');
   background-size: cover;
+  background-position: center;
 
-  padding: 1.3em 1.5em 1em;
+  padding: 1.3em 1.5em .5em;
 }
 
 h1 {
@@ -33,6 +34,11 @@ a {
   color: inherit;
 }
 
+.container {
+  margin: auto;
+  max-width: 1350px;
+}
+
 .title {
   width: 100%;
   display: flex;
@@ -44,16 +50,20 @@ a {
   font-size: 2.1875rem;
 }
 
+.menu-icon {
+  cursor: pointer;
+}
+
 .hero-content {
   margin: 1.5em 0;
 }
 
 .hero-content button {
-  margin: 1.5em 0 1.5em;
+  margin: 1.5em 0 0;
   display: block;
   width: 100%;
   padding: 15px 22px;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background-color: white;
@@ -64,17 +74,81 @@ a {
 }
 
 .hash-links {
+  font-size: 0.875rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .hash-links a {
+  margin-right: 0.625em;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   border: 1px solid white;
   border-radius: 3px;
-  margin-bottom: 16px;
-  padding: 7px 14px;
+  margin-bottom: 1em;
+  padding: 0.4375em 1em;
+}
+
+
+/* tablet  */
+@media (min-width: 668px) {
+  .container {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .title {
+    grid-column: 1/-1;
+  }
+
+  .hero-content {
+    grid-column: 1/8;
+  }
+
+  .hash-links {
+    grid-column: 1/9;
+  }
+
+  .hero-content button {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content button {
+
+  }
+  .hash-links {
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 3.61rem;
+  }
+
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .hero-content {
+    grid-column: 1/10;
+  }
+
+  .hash-links {
+    grid-column: 1/-1;
+  }
+
+  .hash-links a {
+    border: none;
+    text-decoration: underline;
+  }
 }
