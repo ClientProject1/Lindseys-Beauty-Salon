@@ -103,6 +103,10 @@ a {
     grid-column: 1/-1;
   }
 
+  h1 {
+    font-size: 3.4375rem;
+  }
+
   .hero-content {
     grid-column: 1/8;
   }
@@ -149,6 +153,8 @@ a {
 
   .hash-links a {
     border: none;
+    padding: 0;
+    margin-right: 0;
     text-decoration: underline;
   }
 }
