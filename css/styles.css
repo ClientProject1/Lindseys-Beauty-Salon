@@ -133,6 +133,11 @@ main {
   padding: 0.65em 1.2em;
 }
 
+.hash-links a:active {
+  background-color: grey;
+  border-color: grey;
+}
+
 /* main content */
 main h2 {
   margin: 16px 0 24px;
