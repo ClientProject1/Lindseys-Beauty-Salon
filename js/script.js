@@ -11,3 +11,7 @@ hamburger.addEventListener('click', (e) => {
     menuIcon.src = "img/close.svg";
   }
 })
+
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 86);
+});
