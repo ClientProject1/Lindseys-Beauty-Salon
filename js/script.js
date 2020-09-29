@@ -2,6 +2,7 @@ const hamburger = document.querySelector('.menu-icon');
 const nav = document.querySelector('.hamburger-navs');
 const menuIcon = document.querySelector('.menu-icon');
 
+// hamburger menu button
 hamburger.addEventListener('click', (e) => {
   if (nav.classList.contains("addNav")) {
     nav.classList.remove('addNav')
@@ -12,6 +13,7 @@ hamburger.addEventListener('click', (e) => {
   }
 })
 
+// hash tag scroll
 window.addEventListener("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 86);
 });
