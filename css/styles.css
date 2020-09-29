@@ -1,3 +1,4 @@
+/* mobile first design */
 /* all site */
 :root {
   font-size: 16px;
@@ -59,6 +60,33 @@ h2 {
   padding: 1.3em 1.5em 1.3em;
 }
 
+.addNav {
+  display: block !important;
+}
+
+.addMargin {
+  padding-right: 20px;
+}
+
+.hamburger-navs {
+    display: none;
+    font-size: 20px;
+    position: fixed;
+    text-align: left;
+    left: 0px;
+    top: 86px;
+    width: 100%;
+    height: 100%;
+    padding: 64px;
+    background-color: #1A2F30;
+    border-radius: 0;
+    opacity: 0.95;
+}
+
+.hamburger-navs li {
+  padding: 16px;
+}
+
 header {
   background-color: #649C9F;
   background-size: cover;
@@ -72,10 +100,12 @@ nav {
   width: 25%;
 }
 
-nav li {
+nav li,
+.hamburger-navs li {
   list-style: none;
 }
 
+.hamburger-navs a,
 nav a,
 footer a {
   text-decoration: none;
@@ -124,6 +154,7 @@ footer li {
 
 .menu-icon {
   cursor: pointer;
+  margin-left: auto;
 }
 
 .hero-content {
@@ -335,6 +366,8 @@ footer .logo {
 
 }
 
+
+/* large screens */
 @media (min-width: 1024px) {
   nav {
     display: inline-block;
@@ -420,6 +453,8 @@ footer .logo {
     color: black;
   }
 }
+
+/* extra large screens */
 
 @media (min-width: 1310px) {
   .main-text {
