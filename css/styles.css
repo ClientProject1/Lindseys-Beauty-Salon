@@ -480,13 +480,9 @@ footer .logo {
   background-color: #649C9F;
 }
 
-form li {
-  list-style: none;
-}
-
 form {
   max-width: 1050px;
-  padding: 24px;
+  padding: 24px 8px;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -504,6 +500,7 @@ form li {
   flex: 1 350px;
 
   padding: 16px;
+  list-style: none;
 }
 
 form button {
