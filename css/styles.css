@@ -531,3 +531,28 @@ textarea {
     margin-bottom: 48px;
   }
 }
+
+
+/* location */
+.map-container {
+  height: 445px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #649C9F;
+}
+
+#map {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  #map {
+    top: 90%;
+    width: 70%;
+  }
+}
