@@ -490,7 +490,8 @@ form {
   color: white;
 }
 
-.booking-hero {
+.booking-hero,
+.contact-hero {
   width: 65%;
 }
 
@@ -559,4 +560,9 @@ textarea {
   .map-container {
     height: 550px;
   }
+}
+
+/* contact */
+.contact {
+  min-height: 500px;
 }
