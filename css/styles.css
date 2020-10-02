@@ -535,7 +535,7 @@ textarea {
 
 /* location */
 .map-container {
-  height: 445px;
+  height: 550px;
   width: 100%;
   overflow: hidden;
   background-color: #649C9F;
@@ -543,16 +543,20 @@ textarea {
 
 #map {
   position: absolute;
-  top: 85%;
+  top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
+  height: 65%;
   width: 100%;
 }
 
 @media (min-width: 1024px) {
   #map {
-    top: 90%;
+    top: 100%;
     width: 70%;
+  }
+
+  .map-container {
+    height: 550px;
   }
 }
