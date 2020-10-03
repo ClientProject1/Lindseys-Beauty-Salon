@@ -17,7 +17,8 @@ body {
   font-weight: 300;
 }
 
-button {
+button,
+.form-btn {
   display: block;
   width: 100%;
   padding: 15px 22px;
@@ -504,16 +505,17 @@ form li {
   list-style: none;
 }
 
-form button {
+.form-btn {
   margin: 16px;
   width: 100%;
 }
 
 input[type=text],
 input[type=email],
+select,
 textarea {
   font-family: inherit;
-  color: #747474;
+  color: #404040;
   font-size: 16px;
   padding: 6px 16px;
 }
@@ -544,7 +546,7 @@ textarea {
 
 #map {
   position: absolute;
-  top: 95%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 65%;
@@ -553,7 +555,7 @@ textarea {
 
 @media (min-width: 1024px) {
   #map {
-    top: 100%;
+    top: 95%;
     width: 70%;
   }
 

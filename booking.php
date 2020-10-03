@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+
+<?php
+
+  echo "<pre>"
+    print_r($_POST)
+  echo "</pre>"
+
+  $name = $_POST['name'];
+  $visitor_email = $_POST['email'];
+  $message = $_POST['message'];
+  $subject = $_POST['subject'];
+
+  $to = "james.phelps1995@live.com";
+
+  $body = "";
+
+  $body .= "From: ".$name. "\r\n";
+  $body .= "Email: ".$visitor_email. "\r\n";
+  $body .= "Message ".$message. "\r\n";
+
+  mail($to,$subject,$body);
+
+?>
+
 <html lang="en" dir="ltr">
 
 <head>
@@ -42,7 +66,8 @@
     </div>
   </header>
   <main class="booking-bg">
-    <form class="" action="index.html" method="post">
+
+    <form action="mailto:james.phelps1995@live.com" method="post">
       <li>
         <label for="name">Full Name:</label>
         <input type="text" name="name">
@@ -52,11 +77,24 @@
         <input type="email" name="email">
       </li>
       <li>
-        <label for="message">Message:</label>
-        <textarea name="message"></textarea>
+        <label for="subject">Treatment(s):</label>
+        <select id="treatment" name="subject">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Waxing">Waxing</option>
+          <option value="Tanning">Tanning</option>
+          <option value="Lashes & Brows">Lashes & Brows</option>
+          <option value="Body Treatments">Body Treatments</option>
+          <option value="Derminological">Derminological</option>
+          <option value="Manicure">Manicure</option>
+        </select>
       </li>
-      <button type="button" name="button">Send</button>
+      <li>
+        <label for="message">Message:</label>
+        <textarea placeholder="Please say if you want multiple treatments in here, as well as any other information" name="message"></textarea>
+      </li>
+      <input class="form-btn" type="submit" value="Send">
     </form>
+
   </main>
   <footer>
     <div class="footer-container">
@@ -92,7 +130,7 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/booking.js"></script>
 </body>
 
 </html>

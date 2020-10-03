@@ -3,9 +3,7 @@ const nav = document.querySelector('.hamburger-navs');
 const menuIcon = document.querySelector('.menu-icon');
 
 // treatments
-const appointment = document.getElementById('appointmentBtn');
 const waxing = document.getElementById('waxingBtn');
-const tanning = document.getElementById('tanningBtn');
 
 // Booking
 const treatment = document.getElementById('treatment');
@@ -26,17 +24,4 @@ window.addEventListener("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 86);
 });
 
-// Appointment
-appointment.addEventListener('click', () => {
-  localStorage.setItem("storageName", "");
-})
-
-// waxing
-waxing.addEventListener('click', () => {
-  localStorage.setItem("storageName", "Waxing");
-})
-
-// tanning
-tanning.addEventListener('click', () => {
-  localStorage.setItem("storageName", "Tanning");
-})
+treatment.value = localStorage.getItem("storageName");
