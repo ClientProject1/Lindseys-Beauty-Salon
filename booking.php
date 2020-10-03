@@ -2,10 +2,6 @@
 
 <?php
 
-  echo "<pre>"
-    print_r($_POST)
-  echo "</pre>"
-
   $name = $_POST['name'];
   $visitor_email = $_POST['email'];
   $message = $_POST['message'];
@@ -67,7 +63,7 @@
   </header>
   <main class="booking-bg">
 
-    <form action="mailto:james.phelps1995@live.com" method="post">
+    <form action="booking.php" method="post">
       <li>
         <label for="name">Full Name:</label>
         <input type="text" name="name">
