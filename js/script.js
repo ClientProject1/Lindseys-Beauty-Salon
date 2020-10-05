@@ -62,5 +62,5 @@ facial.addEventListener('click', () => {
 
 // manicure
 manicure.addEventListener('click', () => {
-  localStorage.setItem("storageName", "Manicure");
+  localStorage.setItem("storageName", "Hands & Feet");
 })

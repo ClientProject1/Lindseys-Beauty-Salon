@@ -2,9 +2,11 @@
 
 <?php
 
-  if (isset($_POST['email']) && $_POST['email'] != ''){
+  $message_sent = false;
 
-    if (filter_var($_POST ['email'], FILTER_VALIDATE_EMAIL) ) {
+  if (isset($_POST['email']) && $_POST['email'] != '') {
+
+    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 
       $name = $_POST['name'];
       $visitor_email = $_POST['email'];
@@ -20,6 +22,8 @@
       $body .= "Message ".$message. "\r\n";
 
       mail($to,$subject,$body);
+
+      $message_sent = true;
 
     }
 
@@ -59,19 +63,30 @@
       </nav>
     </div>
   </div>
+
   <header>
     <div class="container">
       <div class="hero-content">
         <h1>Booking</h1>
         <div>
-          <p class="booking-hero">Please fill out the form to book a place at the Beauty Room or simply call 07951579333. Or Email: lindsey@lindseysbeautyroom.co.uk</p><br />
+          <p class="booking-hero">Please fill out the form to book a place at the Beauty Room or simply call: <a href="tel:07951579333">07951579333</a>. Or email: <a href = "mailto:lindsey@lindseysbeautyroom.co.uk">lindsey@lindseysbeautyroom.co.uk</a></p><br />
         </div>
       </div>
     </div>
   </header>
   <main class="booking-bg">
 
-    <form action="booking.php" method="post">
+    <?php
+      if($message_sent):
+    ?>
+
+      <h2 class="confirmation">Thanks, We' will be in touch</h2>
+
+    <?php
+      endif;
+    ?>
+
+    <form action="booking.php" method="post" onsubmit="return submitClick();">
       <li>
         <label for="name">Full Name:</label>
         <input type="text" name="name" required>
@@ -85,12 +100,13 @@
         <label for="subject">Treatment(s):</label>
         <select id="treatment" name="subject" required>
           <option value="" disabled selected>Select your option</option>
+          <option value="Other">Other</option>
           <option value="Waxing">Waxing</option>
           <option value="Spray Tan">Spray Tan</option>
           <option value="Lashes & Brows">Lashes & Brows</option>
           <option value="Body Treatments">Body Treatments</option>
           <option value="Derminological">Derminological</option>
-          <option value="Manicure">Manicure</option>
+          <option value="Manicure">Hands & Feet</option>
         </select>
       </li>
       <li>
@@ -123,7 +139,7 @@
       </div>
       <div class="footer-contacts">
         <ul>
-          <li><a href="">FaceBook</a></li>
+          <li><a href="https://www.facebook.com/lindseysbeautyroom/" target="_blank">FaceBook</a></li>
           <li><a href="">01789 740663</a></li>
           <li><a href="">07951579333</a></li>
         </ul>

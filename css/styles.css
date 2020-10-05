@@ -276,6 +276,10 @@ footer .logo {
   grid-column: 1/-1;
 }
 
+.designer {
+  text-decoration: underline;
+}
+
 
 /* tablet  */
 @media (min-width: 668px) {
@@ -479,6 +483,11 @@ footer .logo {
 /* booking page */
 .booking-bg {
   background-color: #649C9F;
+}
+
+.confirmation {
+  text-align: center;
+  margin: 0;
 }
 
 form {
