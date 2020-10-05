@@ -2,20 +2,28 @@
 
 <?php
 
-  $name = $_POST['name'];
-  $visitor_email = $_POST['email'];
-  $message = $_POST['message'];
-  $subject = $_POST['subject'];
+  if (isset($_POST['email']) && $_POST['email'] != ''){
 
-  $to = "james.phelps1995@live.com";
+    if (filter_var($_POST ['email'], FILTER_VALIDATE_EMAIL) ) {
 
-  $body = "";
+      $name = $_POST['name'];
+      $visitor_email = $_POST['email'];
+      $message = $_POST['message'];
+      $subject = $_POST['subject'];
 
-  $body .= "From: ".$name. "\r\n";
-  $body .= "Email: ".$visitor_email. "\r\n";
-  $body .= "Message ".$message. "\r\n";
+      $to = "james.phelps1995@live.com";
 
-  mail($to,$subject,$body);
+      $body = "";
+
+      $body .= "From: ".$name. "\r\n";
+      $body .= "Email: ".$visitor_email. "\r\n";
+      $body .= "Message ".$message. "\r\n";
+
+      mail($to,$subject,$body);
+
+    }
+
+  }
 
 ?>
 
@@ -66,18 +74,19 @@
     <form action="booking.php" method="post">
       <li>
         <label for="name">Full Name:</label>
-        <input type="text" name="name">
+        <input type="text" name="name" required>
       </li>
       <li>
         <label for="email">Email:</label>
-        <input type="email" name="email">
+        <input id="mail" type="email" name="email" required minlength="8">
+        <span class="error" aria-live="polite"></span>
       </li>
       <li>
         <label for="subject">Treatment(s):</label>
-        <select id="treatment" name="subject">
+        <select id="treatment" name="subject" required>
           <option value="" disabled selected>Select your option</option>
           <option value="Waxing">Waxing</option>
-          <option value="Tanning">Tanning</option>
+          <option value="Spray Tan">Spray Tan</option>
           <option value="Lashes & Brows">Lashes & Brows</option>
           <option value="Body Treatments">Body Treatments</option>
           <option value="Derminological">Derminological</option>

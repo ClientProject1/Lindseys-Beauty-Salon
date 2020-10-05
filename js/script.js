@@ -6,6 +6,10 @@ const menuIcon = document.querySelector('.menu-icon');
 const appointment = document.getElementById('appointmentBtn');
 const waxing = document.getElementById('waxingBtn');
 const tanning = document.getElementById('tanningBtn');
+const lashess = document.getElementById('lashesBtn');
+const bodyTreatments = document.getElementById('bodyTreatmentsBtn');
+const facial = document.getElementById('facialBtn');
+const manicure = document.getElementById('manicureBtn');
 
 // Booking
 const treatment = document.getElementById('treatment');
@@ -38,5 +42,25 @@ waxing.addEventListener('click', () => {
 
 // tanning
 tanning.addEventListener('click', () => {
-  localStorage.setItem("storageName", "Tanning");
+  localStorage.setItem("storageName", "Spray Tan");
+})
+
+// lashes and Brows
+lashess.addEventListener('click', () => {
+  localStorage.setItem("storageName", "Lashes & Brows");
+})
+
+// body treatments
+bodyTreatments.addEventListener('click', () => {
+  localStorage.setItem("storageName", "Body Treatments");
+})
+
+// facial
+facial.addEventListener('click', () => {
+  localStorage.setItem("storageName", "Derminological");
+})
+
+// manicure
+manicure.addEventListener('click', () => {
+  localStorage.setItem("storageName", "Manicure");
 })
