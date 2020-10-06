@@ -80,10 +80,10 @@
       if($message_sent):
     ?>
 
-      <h2 class="confirmation">Thanks, We' will be in touch</h2>
+      <h2 class="confirmation">Thanks, We will be in touch</h2>
 
     <?php
-      endif;
+      else:
     ?>
 
     <form action="booking.php" method="post" onsubmit="return submitClick();">
@@ -115,6 +115,10 @@
       </li>
       <input class="form-btn" type="submit" value="Send">
     </form>
+
+    <?php
+      endif;
+    ?>
 
   </main>
   <footer>

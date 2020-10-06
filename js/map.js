@@ -1,3 +1,18 @@
+const hamburger = document.querySelector('.menu-icon');
+const nav = document.querySelector('.hamburger-navs');
+const menuIcon = document.querySelector('.menu-icon');
+
+// hamburger menu button
+hamburger.addEventListener('click', (e) => {
+  if (nav.classList.contains("addNav")) {
+    nav.classList.remove('addNav')
+    menuIcon.src = "img/menu-icon.svg";
+  } else {
+    nav.classList.add('addNav');
+    menuIcon.src = "img/close.svg";
+  }
+})
+
 //map
 mapboxgl.accessToken = 'pk.eyJ1IjoiMnBoZWxqNTYiLCJhIjoiY2tmcXBvemdkMGdkazJ3b2Zza3dkbXFwaiJ9.VTG7wmphDY9NM4u2nxC3PQ';
 var map = new mapboxgl.Map({
@@ -6,11 +21,6 @@ var map = new mapboxgl.Map({
   center: [-1.605367,52.138660], // starting position
   zoom: 17
 });
-
-// add icon
-// var marker = new mapboxgl.Marker()
-// .setLngLat([-1.605367, 52.138660])
-// .addTo(map);
 
 // initialize the map canvas to interact with later
 var canvas = map.getCanvasContainer();
