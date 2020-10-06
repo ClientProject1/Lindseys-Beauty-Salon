@@ -27,7 +27,7 @@ hamburger.addEventListener('click', (e) => {
 
 // hash tag scroll
 window.addEventListener("hashchange", function () {
-    window.scrollTo(window.scrollX, window.scrollY - 86);
+    window.scrollTo(window.scrollX, window.scrollY - 89);
 });
 
 // Appointment
