@@ -175,7 +175,7 @@ form button:hover {
 }
 
 .hash-links {
-  font-size: 0.875rem;
+  font-size: 0.835rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -278,6 +278,15 @@ footer .logo {
 
 .designer {
   text-decoration: underline;
+}
+
+/* small screens  */
+@media (max-width: 414px) {
+  .logo {
+    font-size: 1.64rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
 
 
